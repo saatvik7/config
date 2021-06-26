@@ -1,0 +1,20 @@
+Host lambda
+  HostName 134.173.191.241
+  User ssejpal
+  Port 5055
+
+
+Host knuth
+  HostName knuth.cs.hmc.edu
+  User ssejpal
+
+
+Host trex
+  HostName trex.fsl.cs.sunysb.edu
+  User saatvik7
+
+
+Host vm
+  HostName dhcp158.fsl.cs.sunysb.edu
+  User ssejpal
+
