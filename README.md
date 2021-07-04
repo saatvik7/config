@@ -3,4 +3,4 @@
 Use this command to download files from here:
 
 
-`curl https://github.com/saatvik7/config/blob/main/.vimrc > ~/.vimrc`
+`curl https://raw.githubusercontent.com/saatvik7/config/main/.vimrc > ~/.vimrc`
