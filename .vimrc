@@ -37,6 +37,7 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
 " For split screen navigation
 Plug 'christoomey/vim-tmux-navigator'
 " Plug 'edkolev/tmuxline.vim' " gives vim a nice tmux-like status bar
+Plug 'junegunn/rainbow_parentheses.vim'
 
 " For commenting
 Plug 'preservim/nerdcommenter'
@@ -67,7 +68,7 @@ autocmd VimEnter *
 
 " --- General settings ---
 set number                     " Show current line number
-set relativenumber             " Show relative line number
+" set relativenumber             " Show relative line number
 set showcmd
 set hlsearch
 set splitright
@@ -259,6 +260,18 @@ let g:airline#extensions#ale#enabled = 1
 " let g:syntastic_auto_loc_list = 1
 " let g:syntastic_check_on_open = 0
 " let g:syntastic_check_on_wq = 0
+"
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+:autocmd InsertEnter * set cul
+:autocmd InsertLeave * set nocul
+
+autocmd VimEnter * RainbowParentheses
 
 " " press \g to automatically check for errors
 " nnoremap <Leader>g :SyntasticCheck<CR>
