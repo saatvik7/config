@@ -80,6 +80,9 @@ set hidden " make buffers work normally
 set scrolloff=2
 set linebreak
 set encoding=utf-8
+set expandtab
+set shiftwidth=4
+set tabstop=4
 
 " autocompletion
 set wildignorecase
