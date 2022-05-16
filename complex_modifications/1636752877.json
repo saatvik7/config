@@ -1,0 +1,32 @@
+{
+  "title": "Caps Lock to Escape, and Control when held.",
+  "rules": [
+    {
+      "description": "Caps Lock to Escape, and Control when held.",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

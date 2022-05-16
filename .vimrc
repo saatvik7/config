@@ -78,7 +78,8 @@ set smartcase " if upper case in string, case sensitive
 set mouse=a
 set hidden " make buffers work normally
 set scrolloff=2
-set linebreak
+" set linebreak
+set tw=100
 set encoding=utf-8
 set expandtab
 set shiftwidth=4
@@ -155,14 +156,16 @@ noremap Y y$
 " inoremap <silent> <Esc> <C-O>:stopinsert<CR>
 
 " Make navigating wrapped lines the same as normal
-noremap <silent> k gk
-noremap <silent> j gj
-noremap <silent> gk k
-noremap <silent> gj j
-noremap <silent> ^ g^
-noremap <silent> _ g_
-noremap <silent> g^ ^
-noremap <silent> g_ _
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
+" noremap <silent> k gk
+" noremap <silent> j gj
+" noremap <silent> gk k
+" noremap <silent> gj j
+" noremap <silent> ^ g^
+" noremap <silent> _ g_
+" noremap <silent> g^ ^
+" noremap <silent> g_ _
 
 " Make pasting work like in normal editors
 " Actually this was a bad idea I'm gonna turn it off for now

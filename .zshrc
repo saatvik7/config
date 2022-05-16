@@ -42,6 +42,10 @@ DISABLE_UPDATE_PROMPT="true"
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
+alias gs='git status'
+alias ga='git add -u'
+alias gp='git push'
+alias gc='git commit -m "Complete HW"'
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
@@ -51,11 +55,6 @@ ENABLE_CORRECTION="true"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 DISABLE_AUTO_UPDATE=true
-alias k='ssh knuth'
-alias gs='git status'
-alias ga='git add -u'
-alias gp='git push'
-alias gc='git commit -m "'
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.

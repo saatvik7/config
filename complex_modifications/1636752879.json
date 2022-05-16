@@ -1,0 +1,36 @@
+{
+  "title": "Right Shift to Right Paren when tapped, normal shift otherwise.",
+  "rules": [
+    {
+      "description": "Right Shift to Right Paren when tapped, normal shift otherwise.",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_shift",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_shift",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "0",
+              "modifiers":
+                  [
+                    "left_shift"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
